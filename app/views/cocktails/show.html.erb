@@ -2,7 +2,8 @@
 <% @cocktail.doses.each do |dose| %>
 <p><%= dose.description %> - <%= dose.ingredient.name %> - <%= link_to 'delete', dose_path(dose), method: :delete %></p>
 <% end %>
-
+<%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
+<br>
 <%= link_to 'Add ingredient', new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
 
 <%= link_to 'Go back', cocktails_path, class: "btn btn-primary" %>
