@@ -1,12 +1,12 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1468072114808-903e572b8ead?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=966&q=80);">
   <div class="container">
-    <h1>Cocktails</h1>
+    <h1>Cocktails 🍸</h1>
     <p>Add and save all your cocktail recipes</p>
     <%= link_to 'Add your cocktail', new_cocktail_path, class: "btn btn-primary" %>
   </div>
 </div>
-<br>
-<div class="d-flex align-items-center">
+
+<div class="cards">
   <% @cocktails.each do |cocktail| %>
     <div class="card-product">
         <%= render 'photo_check', cocktail: cocktail %>

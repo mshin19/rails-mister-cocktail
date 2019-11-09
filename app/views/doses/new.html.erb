@@ -1,6 +1,8 @@
-<h1>Add a Recipe</h1>
-<%= simple_form_for [@cocktail, @dose] do |f| %>
-  <%= f.input :description %>
-  <%= f.association :ingredient %>
-  <%= f.button :submit, class: "btn btn-primary" %>
-<% end %>
+<div class="container border rounded p-3">
+  <h1>Add a Recipe</h1>
+  <%= simple_form_for [@cocktail, @dose] do |f| %>
+    <%= f.input :description %>
+    <%= f.association :ingredient %>
+    <%= f.button :submit, class: "btn btn-primary" %>
+  <% end %>
+</div>
