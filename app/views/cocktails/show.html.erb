@@ -2,11 +2,7 @@
 <% @cocktail.doses.each do |dose| %>
 <p><%= dose.description %> - <%= dose.ingredient.name %> - <%= link_to 'delete', dose_path(dose), method: :delete %></p>
 <% end %>
-<% if @cocktail.photo.file.nil? %>
-  <img src='https://309w5s255371fs4df2vftgbl-wpengine.netdna-ssl.com/wp-content/uploads/2017/09/placeholder.jpg' />   
-<% else %>
-  <%= cl_image_tag cocktail.photo, height: 300, width: 400, crop: :fill %> />
-<% end %>
+<%= render 'photo_check', cocktail: @cocktail %>
 <br>
 <%= link_to 'Add ingredient', new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
 <%= link_to 'Delete Cocktail', cocktail_path(@cocktail), method: :delete, class: "btn btn-primary" %>
